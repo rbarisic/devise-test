@@ -1,0 +1,108 @@
+<% if !user_signed_in? %>
+  <div class="background-image">
+
+  </div>
+
+  <div class="social-bar">
+    <a href="#"><i class="fa fa-twitter fa-3x"></i></a>
+  </div>
+
+  <div class="content-wrapper">
+      <div class="splash text-center">
+        <div class="pure-g">
+          <div class="pure-u-1">
+            <div class="l-box">
+              <h1>Welcome!</h1>
+              <p>Welcome to this awesome website. Please register an account!</p>
+            </div>
+          </div>
+          <div class="pure-u-1">
+            <div class="l-box">
+              <%= form_for(@user, html: { class: 'pure-form pure-form-stacked pure-form-narrow'}, as: @user, url: registration_path(@user)) do |f| %>
+
+                <%= f.email_field :email, autofocus: true, placeholder: 'Your Email Address' %>
+                <%= f.password_field :password, placeholder: 'choose a password' %>
+                <%= f.submit "Sign up", class: 'pure-button pure-button-primary pure-button-large' %>
+              <% end %>
+              <p><%= link_to 'Already a User?',new_user_session_path %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+<% else %>
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="pure-g">
+
+        <div class="pure-u-1">
+          <div class="l-box text-center">
+            <h1>Hello, <%= current_user.email %>!</h1>
+            <p><i class="fa fa-tasks"></i> <a href="#">2 new tasks</a></p>
+          </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="l-box l-box-border">
+            <h2>Device Central</h2>
+            <p>Here you can adjust your devices.</p>
+            <ul>
+              <table class="pure-table-horizontal pure-table-max">
+                <tr>
+                  <th>Type</th>
+                  <th>Name</th>
+                </tr>
+                <tr>
+                  <th><i class="fa fa-mobile fa-2x"></i></th>
+                  <th>Iphone 6</th>
+                </tr>
+                <tr>
+                  <th><i class="fa fa-mobile fa-2x"></i></th>
+                  <th>Iphone 5</th>
+                </tr>
+                <tr>
+                  <th><i class="fa fa-mobile fa-2x"></i></th>
+                  <th>Galaxy Note II</th>
+                </tr>
+              </table>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="l-box l-box-border">
+            <h2>Common Tasks</h2>
+            <form class="pure-form pure-form-stacked">
+              <fieldset>
+                <label for="checkbox">
+                  <input type="checkbox"> First Task</input>
+                </label>
+                <label for="checkbox">
+                  <input type="checkbox"> Second Task</input>
+                </label>
+                <label for="checkbox">
+                  <input type="checkbox"> Third Task</input>
+                </label>
+                <label for="checkbox">
+                  <input type="checkbox"> Fourth Task</input>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-3">
+        <div class="l-box l-box-border">
+            <%= render 'shared/tweets' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="pure-u-1">
+        <div class="l-box l-box-border">
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  operating_system: MyString
+  screen_width: 1
+  screen_height: 1
+  model_number: MyString
+
+two:
+  name: MyString
+  operating_system: MyString
+  screen_width: 1
+  screen_height: 1
+  model_number: MyString

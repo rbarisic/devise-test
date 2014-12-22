@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+  <%= render 'shared/header_for_users' %>
+<% else %>
+  <%= render 'shared/header_for_non_users' %>
+<% end %>

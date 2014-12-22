@@ -1,0 +1,73 @@
+.l-box {
+  margin: 1em;
+  padding: 1em;
+}
+
+.l-box-border {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.pure-button-primary {
+  background: orange;
+}
+
+.pure-button {
+  background: orange;
+}
+
+.timeline {
+  font-size: 0.8em;
+  overflow: hidden;
+}
+
+.twitter-timeline {
+  height: 400px;
+}
+
+.pure-table-max {
+  width: 100%;
+}
+
+.pure-button {
+  color: #fff !important;
+  background-color: #ffa500 !important;
+}
+
+.pure-button-primary {
+  color: white;
+  background-color: #00a5ff !important;
+}
+
+.pure-button:hover {
+  text-decoration: none !important;
+}
+
+.pull-right {
+  float: right;
+  clear: right;
+}
+
+.pull-left {
+  float: left;
+  clear: left;
+}
+
+.pure-table {
+  font-weight: 500;
+}
+
+.pure-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.5em;
+}
+
+.pure-list.pure-list-horizontal li {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0.2em auto;
+}
+
+.pure-list.pure-list-actions {
+}

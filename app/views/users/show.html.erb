@@ -1,0 +1,9 @@
+<div class="content-wrapper">
+  <div class="content content-center">
+    <% if @user == current_user %>
+      <h1 class="text-center">Your Profile<small><%= @user.email %></small></h1>
+    <% else %>
+      <h1 class="text-center"><small><%= "#{@user.email}'s Profile" %></small></h1>
+    <% end %>
+  </div>
+</div>

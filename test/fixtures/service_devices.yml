@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  operating_system: 
+  device_id: 
+  user_id: 
+  repaired: false
+  repair_done: 
+
+two:
+  name: MyString
+  operating_system: 
+  device_id: 
+  user_id: 
+  repaired: false
+  repair_done: 

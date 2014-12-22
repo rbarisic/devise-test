@@ -1,0 +1,97 @@
+body {
+  color: #333;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200;
+}
+
+h1 small {
+  display: block;
+  line-height: 2;
+  font-size: 50%;
+}
+
+a {
+  color: #ffa500;
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.window {
+  padding: 2em;
+}
+
+.window.center {
+  margin: 0 auto;
+}
+
+.window.white {
+  color: #333;
+  background-color: white;
+}
+
+#header {
+  border-bottom: 1px solid #eee;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-medium {
+  color: #888;
+}
+
+.text-bright {
+  color: #fff;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('background.jpg');
+  z-index: 1;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+
+  padding-bottom: 2em;
+}
+
+.content {
+  padding: 1em !important;
+  background-color: #eee;
+}
+
+.content-center {
+  background-color: #fff !important;
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media screen and (min-width: 40em) {
+  .content-center {
+    width: 50%;
+  }
+}

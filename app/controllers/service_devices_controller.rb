@@ -1,0 +1,2 @@
+class ServiceDevicesController < ApplicationController
+end

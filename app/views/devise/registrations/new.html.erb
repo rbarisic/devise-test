@@ -1,0 +1,41 @@
+<div id="bg" class="background-image">
+  <script type="text/javascript">
+    document.getElementById('bg').style.backgroundImage = 'url(http://az619519.vo.msecnd.net/files/AitBenhaddou_EN-US9642287930_1920x1200.jpg)'
+  </script>
+</div>
+
+<div class="content-wrapper">
+  <div class="content content-center">
+    <h2 class="text-center">Sign up</h2>
+
+    <%= form_for(resource, html: { class: 'pure-form pure-form-aligned'}, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <fieldset>
+          <div class="pure-control-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="pure-control-group">
+            <%= f.label :password %>
+            <% if @validatable %>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <div class="pure-control-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+
+          <div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> I've read the terms and conditions
+            </label>
+            <%= f.submit "Sign up", class: 'pure-button' %>
+          </div>
+        </fieldset>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

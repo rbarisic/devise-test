@@ -1,0 +1,18 @@
+<table class="pure-table">
+    <tr>
+      <th>Name</th>
+      <th>Operating System</th>
+      <th>Screen Width</th>
+      <th>Screen Height</th>
+      <th>Model Number</th>
+    </tr>
+  <% @devices.each do |device| %>
+    <tr>
+      <td><%= link_to device.name, device %></td>
+      <td><%= device.operating_system %></td>
+      <td><%= device.screen_width %> px</td>
+      <td><%= device.screen_height %> px</td>
+      <td><%= device.model_number %></td>
+    </tr>
+  <% end %>
+</table>

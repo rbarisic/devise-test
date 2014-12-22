@@ -1,0 +1,14 @@
+<div id="header">
+  <div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <%= link_to 'Devise Test', root_path, class: 'pure-menu-heading' %>
+    <ul>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Device DB', devices_path %></li>
+    </ul>
+  </div>
+</div>
+
+<ul class="logout">  
+    <li class="pull-right"><%= link_to '<i class="fa fa-sign-out"></i> logout'.html_safe, destroy_user_session_path, method: :delete %></li>
+    <li>logged in as: <b><%= link_to current_user.email, user_path(current_user) %></b></li>
+</ul>

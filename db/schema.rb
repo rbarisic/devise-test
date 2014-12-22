@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141222094231) do
+ActiveRecord::Schema.define(version: 20141222150751) do
 
   create_table "devices", force: true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20141222094231) do
     t.string   "model_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_link"
   end
 
   create_table "service_devices", force: true do |t|

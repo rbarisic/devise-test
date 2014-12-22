@@ -88,6 +88,7 @@ a:hover {
   background-color: #fff !important;
   margin: 0 auto;
   width: 90%;
+  border: 1px solid #eee;
 }
 
 @media screen and (min-width: 40em) {

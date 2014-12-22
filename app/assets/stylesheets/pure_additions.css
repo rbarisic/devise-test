@@ -8,14 +8,6 @@
   border-radius: 4px;
 }
 
-.pure-button-primary {
-  background: orange;
-}
-
-.pure-button {
-  background: orange;
-}
-
 .timeline {
   font-size: 0.8em;
   overflow: hidden;
@@ -39,18 +31,21 @@
   background-color: #00a5ff !important;
 }
 
+.pure-button-cancel {
+  background-color: #FF895A !important;
+}
+
 .pure-button:hover {
   text-decoration: none !important;
 }
 
 .pull-right {
   float: right;
-  clear: right;
 }
 
 .pull-left {
   float: left;
-  clear: left;
+  clear: both;
 }
 
 .pure-table {
@@ -70,4 +65,17 @@
 }
 
 .pure-list.pure-list-actions {
+}
+
+.pure-droplet {
+  border: 1px solid #eee;
+  padding: 1em;
+}
+
+.pure-form label {
+  color: #666;
+}
+
+.clear {
+  clear: both;
 }

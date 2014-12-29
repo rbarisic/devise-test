@@ -46,3 +46,4 @@ end
 
 gem 'devise'
 gem 'purecss'
+gem 'pg'

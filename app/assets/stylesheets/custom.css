@@ -91,6 +91,11 @@ a:hover {
   border: 1px solid #eee;
 }
 
+.field_with_errors {
+  display: inline;
+  color: #f00;
+}
+
 @media screen and (min-width: 40em) {
   .content-center {
     width: 50%;

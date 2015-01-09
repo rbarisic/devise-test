@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141222150751) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "devices", force: true do |t|
     t.string   "name"
     t.string   "operating_system"
@@ -27,7 +30,6 @@ ActiveRecord::Schema.define(version: 20141222150751) do
   create_table "service_devices", force: true do |t|
     t.string   "name"
     t.string   "operating_system"
-    t.integer  "device_id"
     t.integer  "user_id"
     t.boolean  "repaired"
     t.boolean  "repair_done"
@@ -36,7 +38,7 @@ ActiveRecord::Schema.define(version: 20141222150751) do
     t.datetime "updated_at"
   end
 
-  add_index "service_devices", ["user_id"], name: "index_service_devices_on_user_id"
+  add_index "service_devices", ["user_id"], name: "index_service_devices_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -54,7 +56,7 @@ ActiveRecord::Schema.define(version: 20141222150751) do
     t.boolean  "admin"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

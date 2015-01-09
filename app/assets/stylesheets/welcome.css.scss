@@ -56,9 +56,14 @@
     transition: none;
     color: #333;
     background: #fff;
-    padding: 1em;
+    padding: 0em;
     margin: 2em 1em;
     border-radius: 8px;
+}
+
+.splash a {
+  transition: opacity 0.5s;
+  opacity: 100;
 }
 
 @media screen and (min-width: 40em) {
@@ -66,14 +71,23 @@
     transition: all 1s;
     color: #fff;
     max-width: 50%;
-    padding: 2em;
+    padding: 1em;
     margin: 2em auto;
     border-radius: 8px;
     background: none;
   }
 
+  .splash a {
+    transition: opacity 0.5s;
+    opacity: 0;
+  }
+
   .splash:hover {
     color: #333;
     background: #fff;
+  }
+
+  .splash:hover a {
+    opacity: 100;
   }
 }

@@ -47,3 +47,4 @@ end
 gem 'devise'
 gem 'purecss'
 gem 'pg'
+gem 'thin'
